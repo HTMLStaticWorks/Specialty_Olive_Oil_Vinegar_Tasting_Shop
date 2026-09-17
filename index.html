@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOLARIA & TERRA | California & Mediterranean Fine Olive Oils & Aged Vinegars</title>
+  <meta name="description" content="Artisanal cold-pressed single-estate olive oils and barrel-aged fruit vinegars. Visit our Santa Ynez tasting room or explore curated harvest flights online.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+  <!-- Announcement Top Bar -->
+  <div class="announcement-bar">
+    <span>🌞 <strong>New 2025/2026 Harvest Released:</strong> High-Polyphenol California & Tuscan Single Estates</span>
+    <span style="opacity: 0.5;">|</span>
+    <span>Complimentary Tasting Flight with orders over $85 • <a href="products.html">Shop Current Harvest</a></span>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="container header-container">
+      <!-- Brand Logo -->
+      <a href="index.html" class="site-logo" aria-label="SOLARIA & TERRA Homepage">
+        <span class="brand-name">SOLARIA &amp; TERRA</span>
+        <span class="brand-tagline">Botanical Olive Oils &amp; Vinegars</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="home-2.html" class="nav-link">Home 2</a>
+        <a href="products.html" class="nav-link">Olive Oils &amp; Vinegars</a>
+        <a href="events.html" class="nav-link">Tasting Events</a>
+        <a href="gifting.html" class="nav-link">Gifting &amp; Sets</a>
+        <a href="contact.html" class="nav-link">Boutique &amp; Visit</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="header-actions">
+        <!-- Theme & RTL Pill Widget (Navbar Controls) -->
+        <div class="navbar-util-pill" aria-label="Theme and Language Controls">
+          <button class="navbar-util-btn theme-toggle-trigger" onclick="App.toggleTheme()" title="Toggle Dark/Light Theme" aria-label="Toggle Theme">
+            🌙
+          </button>
+          <button class="navbar-util-btn rtl-toggle-trigger" onclick="App.toggleRTL()" title="Toggle RTL Layout" aria-label="Toggle RTL">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="4" y1="9" x2="20" y2="9"></line>
+              <polyline points="15 4 20 9 15 14"></polyline>
+              <line x1="20" y1="15" x2="4" y2="15"></line>
+              <polyline points="9 20 4 15 9 10"></polyline>
+            </svg>
+          </button>
+        </div>
+
+        <a href="products.html" class="action-btn" aria-label="Search Catalog" title="Search Collection">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </a>
+        <button class="action-btn trigger-cart-drawer" aria-label="Open Tasting Bag" title="Tasting Bag">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="cart-count-badge">1</span>
+        </button>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Mobile Navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    
+    <!-- Hero Section (Editorial Brightland Style) -->
+    <section class="hero-editorial">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <span class="eyebrow eyebrow-terracotta">CALIFORNIA &amp; MEDITERRANEAN HARVEST</span>
+            <h1 class="hero-title">
+              Sun-drenched fruit, <em>cold-pressed</em> into liquid gold.
+            </h1>
+            <p class="hero-description">
+              Artisanal single-estate extra virgin olive oils and slow oak-aged balsamics. Harvested within 90 minutes of picking to capture living enzymes, ultra-high polyphenols, and luminous flavor.
+            </p>
+            <div class="hero-ctas">
+              <a href="products.html" class="btn btn-primary btn-lg">Explore Estate Oils</a>
+              <a href="#tastingBar" class="btn btn-outline btn-lg">Experience Tasting Bar</a>
+            </div>
+
+            <!-- Trust Row -->
+            <div class="hero-trust-row">
+              <div class="trust-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>&lt; 0.14% Ultra-Low Acidity</span>
+              </div>
+              <div class="trust-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Up to 710 mg/kg Polyphenols</span>
+              </div>
+              <div class="trust-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Zero Fillers or Additives</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-media-wrapper">
+            <div class="hero-main-card">
+              <img src="image/oi (3).jpg" alt="SOLARIA & TERRA artisanal harvest bottles under sunlit olive branches">
+            </div>
+            <div class="floating-flight-badge">
+              <div class="flight-icon">🫒</div>
+              <div>
+                <h5 class="font-serif">Santa Ynez Tasting Room</h5>
+                <p>Guided sensory flights daily • Open till 7 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Press Banner -->
+    <section style="background-color: var(--color-canvas); border-bottom: 1px solid var(--color-border); padding: 1.75rem 0;">
+      <div class="container text-center">
+        <p style="font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.18em; color: var(--color-text-muted); margin-bottom: 1rem; font-weight: 700;">
+          Celebrated by Master Sommeliers &amp; Culinary Editors
+        </p>
+        <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 2rem; opacity: 0.85; font-family: var(--font-display); font-size: 1.35rem; font-weight: 600; color: var(--color-text-secondary);">
+          <span>"The purest, most vibrant California EVOO you can pour." — <em>Vogue</em></span>
+          <span>"A revelatory sensory tasting experience." — <em>Bon Appétit</em></span>
+          <span>"Remarkable polyphenol density." — <em>The New York Times</em></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Tasting Bar Experience Section -->
+    <section class="section-py tasting-bar-section" id="tastingBar">
+      <div class="container">
+        <div class="text-center" style="max-width: 680px; margin: 0 auto;">
+          <span class="eyebrow eyebrow-terracotta">VIRTUAL TASTING BAR COUNTER</span>
+          <h2>Pour, Inhale &amp; Savor the Flight</h2>
+          <p class="lead-p">
+            Select a signature bottle below to explore its harvest terroir, aromatic notes, polyphenol density, and ideal culinary companion.
+          </p>
+        </div>
+
+        <div class="tasting-flight-interactive">
+          <!-- Tasting Selector Tabs -->
+          <div class="tasting-selector-tabs" id="tastingTabsContainer">
+            <button class="tasting-tab-btn active" onclick="switchTastingView('oil-awake')">01. AWAKE (Robust &amp; Peppery)</button>
+            <button class="tasting-tab-btn" onclick="switchTastingView('oil-alive')">02. ALIVE (Herbaceous Green)</button>
+            <button class="tasting-tab-btn" onclick="switchTastingView('oil-lucent')">03. LUCENT (Lemon Agrumato)</button>
+            <button class="tasting-tab-btn" onclick="switchTastingView('vin-balsamic-reserve')">04. NOCTURNE (12-Yr Balsamic)</button>
+          </div>
+
+          <!-- Dynamic Display Grid -->
+          <div class="tasting-display-grid" id="tastingDisplayCard">
+            <!-- Rendered dynamically -->
+            <div class="tasting-bottle-view">
+              <span class="badge badge-terracotta tasting-bottle-badge">Signature Extra Virgin</span>
+              <img id="tastingBottleImg" src="image/oi (1).jpg" alt="AWAKE EVOO bottle">
+              <span class="tasting-bottle-caption">UV-Protected White Coated Glass</span>
+            </div>
+
+            <div>
+              <div class="flex items-center gap-2" style="margin-bottom: 0.5rem;">
+                <span class="badge badge-amber" id="tastingIntensityBadge">★★★ ROBUST INTENSITY</span>
+                <span style="font-size: 0.8rem; color: var(--color-text-muted); font-weight: 600;" id="tastingOriginText">📍 Santa Ynez Valley, California</span>
+              </div>
+              <h3 id="tastingTitle" style="font-size: 2.2rem; margin-bottom: 0.5rem;">AWAKE — Bold Cold-Pressed EVOO</h3>
+              <p id="tastingDesc" style="color: var(--color-text-secondary); line-height: 1.65; margin-bottom: 1.5rem;">
+                Crafted for cozy stews, slow roasts, bitter greens, crusty sourdough dipping, and finishing grilled meats. Bottled in opaque UV-protecting white glass to preserve peak living enzymes.
+              </p>
+
+              <!-- Specs Grid -->
+              <div class="tasting-specs-grid">
+                <div class="spec-box">
+                  <span class="spec-label">Polyphenol Count</span>
+                  <span class="spec-value" id="tastingPolyphenols" style="color: var(--color-olive-grove);">620 mg/kg</span>
+                </div>
+                <div class="spec-box">
+                  <span class="spec-label">Oleic Free Acidity</span>
+                  <span class="spec-value" id="tastingAcidity">&lt; 0.14%</span>
+                </div>
+                <div class="spec-box">
+                  <span class="spec-label">Olive Varietals</span>
+                  <span class="spec-value" id="tastingVarietals">Coratina &amp; Frantoio</span>
+                </div>
+                <div class="spec-box">
+                  <span class="spec-label">Smoke Point</span>
+                  <span class="spec-value" id="tastingSmokePoint">410°F / 210°C</span>
+                </div>
+              </div>
+
+              <!-- Tasting Aroma Pills -->
+              <div>
+                <span class="spec-label" style="margin-bottom: 0.4rem;">Sommelier Aroma Notes</span>
+                <div class="flavor-notes-pills" id="tastingNotesContainer">
+                  <span class="flavor-pill">Artichoke Hearts</span>
+                  <span class="flavor-pill">Wild Arugula</span>
+                  <span class="flavor-pill">Black Pepper</span>
+                  <span class="flavor-pill">Fresh Cut Grass</span>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4" style="margin-top: 2rem;">
+                <button class="btn btn-primary btn-lg" id="tastingAddToCartBtn" onclick="App.addToCart('oil-awake')">
+                  Add AWAKE to Bag — $42.00
+                </button>
+                <button class="btn btn-outline" onclick="App.openQuickView('oil-awake')">
+                  Full Dossier
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products Spotlight (Brightland Aesthetic Grid) -->
+    <section class="section-py">
+      <div class="container">
+        <div class="flex justify-between items-center" style="margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <span class="eyebrow eyebrow-olive">ESTATE CELLAR SELECTION</span>
+            <h2>Harvest Favorites &amp; Gift Sets</h2>
+          </div>
+          <a href="products.html" class="link-arrow font-sans">
+            <span>View All 12 Oils &amp; Vinegars</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+
+        <div class="grid grid-4" id="homeFeaturedGrid">
+          <!-- Rendered via script / data -->
+        </div>
+      </div>
+    </section>
+
+    <!-- The Origin Story & Mediterranean Roots -->
+    <section class="section-py story-section">
+      <div class="container">
+        <div class="grid grid-2" style="align-items: center; gap: 4rem;">
+          <div class="editorial-media-wrapper">
+            <div class="editorial-media-card">
+              <img src="image/oi (5).jpg" alt="Artisanal olive harvest and stone milling">
+            </div>
+            <div class="story-floating-badge">
+              <span class="eyebrow eyebrow-amber" style="margin-bottom: 0.25rem;">BRANCH TO BOTTLE</span>
+              <p style="font-size: 0.85rem; line-height: 1.5;">Cold-extracted within <strong>90 minutes</strong> of dawn harvest under inert nitrogen.</p>
+            </div>
+          </div>
+
+          <div>
+            <span class="eyebrow eyebrow-terracotta">THE SOLARIA PHILOSOPHY</span>
+            <h2>Rooted in Mediterranean Soil, Born Under California Sun</h2>
+            <p class="lead-p" style="margin: 1.25rem 0;">
+              Most supermarket olive oils sit in heated cargo ships for 18 months, stripped of their polyphenols and life-giving flavor. We do things differently.
+            </p>
+            <p style="color: var(--color-text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+              We partner exclusively with multi-generational family groves in Santa Ynez, Tuscany, and Peloponnese. We harvest early in the season when olives are green and nutrient-dense, milling them at temperatures below 78°F without chemical filtration.
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+              <div style="border-left: 2px solid var(--color-terracotta); padding-left: 1rem;">
+                <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Single-Estate Provenance</h4>
+                <p style="font-size: 0.82rem; color: var(--color-text-secondary);">Exact harvest lot, grove coordinates, and milling date printed on every bottle.</p>
+              </div>
+              <div style="border-left: 2px solid var(--color-olive-grove); padding-left: 1rem;">
+                <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">UV Shield Protection</h4>
+                <p style="font-size: 0.82rem; color: var(--color-text-secondary);">Matte ceramic white glass blocks 100% of damaging photo-oxidation.</p>
+              </div>
+            </div>
+
+            <div style="margin-top: 2.5rem;">
+              <a href="contact.html" class="btn btn-dark">Visit Our Tasting Room</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Dish Pairing Selector -->
+    <section class="section-py" style="background-color: var(--color-canvas);">
+      <div class="container">
+        <div class="pairing-finder-container">
+          <div class="text-center" style="max-width: 620px; margin: 0 auto;">
+            <span class="eyebrow eyebrow-terracotta">INTERACTIVE FLAVOR MATCHER</span>
+            <h2>What are you cooking tonight?</h2>
+            <p style="color: var(--color-text-secondary);">
+              Tap a dish to discover the sommelier-calibrated olive oil and aged vinegar combination.
+            </p>
+          </div>
+
+          <!-- Dish Buttons -->
+          <div class="dish-selection-grid">
+            <button class="dish-card-btn active" data-pairing-id="pairing-burrata">
+              <span class="dish-emoji">🍅</span>
+              <span class="dish-title">Burrata &amp; Tomatoes</span>
+            </button>
+            <button class="dish-card-btn" data-pairing-id="pairing-sourdough">
+              <span class="dish-emoji">🥖</span>
+              <span class="dish-title">Warm Sourdough</span>
+            </button>
+            <button class="dish-card-btn" data-pairing-id="pairing-seafood">
+              <span class="dish-emoji">🐟</span>
+              <span class="dish-title">Grilled Seabass</span>
+            </button>
+            <button class="dish-card-btn" data-pairing-id="pairing-steak">
+              <span class="dish-emoji">🥩</span>
+              <span class="dish-title">Charred Ribeye</span>
+            </button>
+            <button class="dish-card-btn" data-pairing-id="pairing-pizza">
+              <span class="dish-emoji">🍕</span>
+              <span class="dish-title">Wood-Fired Pizza</span>
+            </button>
+            <button class="dish-card-btn" data-pairing-id="pairing-dessert">
+              <span class="dish-emoji">🍨</span>
+              <span class="dish-title">Vanilla Gelato</span>
+            </button>
+          </div>
+
+          <!-- Pairing Output Box -->
+          <div class="pairing-result-box" id="pairingResultOutput">
+            <div>
+              <span class="eyebrow eyebrow-terracotta">SOMMELIER'S DISH PAIRING</span>
+              <h3 style="margin-bottom: 0.75rem;">Heirloom Burrata &amp; Sun Tomatoes 🍅</h3>
+              <p style="color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 1.25rem;">
+                The grassy, tomato-vine aroma of Alive elevates the milky sweetness of fresh burrata, while a splash of Parasol adds champagne sparkle.
+              </p>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <span class="badge badge-olive">Oil: ALIVE — Herbaceous EVOO</span>
+                <span class="badge badge-amber">Vinegar: PARASOL — Champagne &amp; Orange</span>
+              </div>
+            </div>
+            <div style="background-color: #FFFFFF; border-radius: var(--radius-md); border: 1px solid var(--color-border); padding: 1.5rem; text-align: center;">
+              <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Experience this Flight at Home</h4>
+              <p style="font-size: 0.85rem; color: var(--color-text-secondary); margin-bottom: 1.25rem;">Includes full pairing recipe card &amp; sommelier tasting notes.</p>
+              <button class="btn btn-primary btn-sm" onclick="App.addToCart('oil-alive'); App.addToCart('vin-trebbiano');">
+                Add Pairing Duo to Bag ($76.00)
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tasting Events & Masterclasses Spotlight -->
+    <section class="section-py" style="background-color: var(--color-canvas-subtle); border-top: 1px solid var(--color-border);">
+      <div class="container">
+        <div class="grid grid-2" style="align-items: center; gap: 3.5rem;">
+          <div>
+            <span class="eyebrow eyebrow-olive">SANTA YNEZ VALLEY TASTING ROOM</span>
+            <h2>Guided Tastings &amp; Sensory Workshops</h2>
+            <p class="lead-p" style="margin: 1.25rem 0;">
+              Pull up a stool at our 20-foot reclaimed Italian oak tasting bar. Led by certified olive oil sommeliers, our intimate sessions guide you through flavor profiling, polyphenol detection, and cheese pairings.
+            </p>
+            <div class="event-highlights-list" style="margin-bottom: 2rem;">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>The Grand Single-Estate Flight:</strong> 6 oils + 4 vinegars with farmstead bites ($55)</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Sommelier Level I Workshop:</strong> Defect analysis &amp; blending masterclass ($95)</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Private Cellar Hire:</strong> Exclusive evening bookings for corporate &amp; bridal parties</span>
+              </li>
+            </div>
+            <div class="flex gap-4">
+              <a href="events.html" class="btn btn-primary">View Upcoming Sessions</a>
+              <a href="contact.html" class="btn btn-outline">Location &amp; Directions</a>
+            </div>
+          </div>
+
+          <div class="editorial-media-card">
+            <img src="image/oi (32).jpg" alt="Sommelier guided olive oil tasting room">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Editorial Gifting Teaser -->
+    <section class="section-py" style="background-color: #FFFFFF;">
+      <div class="container">
+        <div class="grid grid-2" style="align-items: center; gap: 4rem;">
+          <div class="editorial-media-card">
+            <img src="image/oi (19).jpg" alt="Artisanal gift box with gold pour spouts">
+          </div>
+          <div>
+            <span class="eyebrow eyebrow-terracotta">ELEVATED GIFTING</span>
+            <h2>Heirloom Keepsake Boxes &amp; Custom Duos</h2>
+            <p class="lead-p" style="margin: 1.25rem 0;">
+              Every gift is hand-wrapped in Italian linen paper, adorned with custom wax seals, and accompanied by a gold pour spout and your handwritten calligraphy note.
+            </p>
+            <p style="color: var(--color-text-secondary); margin-bottom: 2rem;">
+              Build your own 2, 3, or 4-bottle collection in our interactive studio or choose from our sommelier-curated pantry sets.
+            </p>
+            <div class="flex gap-4">
+              <a href="gifting.html" class="btn btn-primary">Custom Gift Box Builder</a>
+              <a href="gifting.html#corporate" class="btn btn-outline">Corporate Concierge</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section-py-sm" style="background-color: var(--color-canvas-subtle); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+      <div class="container text-center">
+        <span class="eyebrow eyebrow-terracotta">COMMUNITY LOVE</span>
+        <h2 style="margin-bottom: 2.5rem;">Notes from Our Tasting Table</h2>
+        
+        <div class="grid grid-3">
+          <div style="background-color: #FFFFFF; padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--color-border); text-align: left;">
+            <div style="color: var(--color-sun-amber); font-size: 1.1rem; margin-bottom: 0.5rem;">★★★★★</div>
+            <p style="font-size: 0.95rem; color: var(--color-text-primary); line-height: 1.6; margin-bottom: 1.25rem;">
+              "The AWAKE oil ruined all supermarket oils for me forever. It smells like pure freshly cut herbs and has that authentic peppery kick at the back of the throat. Exceptional quality."
+            </p>
+            <span style="font-weight: 700; font-size: 0.85rem;">— Dr. Sophia L., San Francisco</span>
+          </div>
+
+          <div style="background-color: #FFFFFF; padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--color-border); text-align: left;">
+            <div style="color: var(--color-sun-amber); font-size: 1.1rem; margin-bottom: 0.5rem;">★★★★★</div>
+            <p style="font-size: 0.95rem; color: var(--color-text-primary); line-height: 1.6; margin-bottom: 1.25rem;">
+              "We booked the Grand Tasting Flight for our anniversary in Santa Ynez. The sommelier Elena was incredible. Pairing the 12-year balsamic over gelato changed my life."
+            </p>
+            <span style="font-weight: 700; font-size: 0.85rem;">— Marcus &amp; Chloe T., Los Angeles</span>
+          </div>
+
+          <div style="background-color: #FFFFFF; padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--color-border); text-align: left;">
+            <div style="color: var(--color-sun-amber); font-size: 1.1rem; margin-bottom: 0.5rem;">★★★★★</div>
+            <p style="font-size: 0.95rem; color: var(--color-text-primary); line-height: 1.6; margin-bottom: 1.25rem;">
+              "Sent 45 customized gift sets to our key executive clients with custom embossed notes. The feedback was overwhelmingly positive. Seamless corporate concierge!"
+            </p>
+            <span style="font-weight: 700; font-size: 0.85rem;">— Victoria K., Partner, Menlo Park</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <span class="brand-name">SOLARIA &amp; TERRA</span>
+          <p>
+            Single-estate California and Mediterranean cold-pressed botanical oils and artisanal living vinegars. Dedicated to honoring regenerative groves and sunlit culinary traditions.
+          </p>
+          <div style="margin-top: 1.5rem; display: flex; gap: 0.75rem; align-items: center;">
+            <span class="seal-stamp" style="color: var(--color-sun-amber); border-color: var(--color-sun-amber);">
+              2025/2026<br>ESTATE<br>HARVEST
+            </span>
+            <div style="font-size: 0.78rem; color: #A8A29E;">
+              Santa Ynez Valley Tasting Boutique<br>
+              <strong>428 Sunlit Orchard Way, CA</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Tasting &amp; Shop</h5>
+          <div class="footer-links">
+            <a href="products.html">All Olive Oils &amp; Vinegars</a>
+            <a href="products.html?cat=olive-oil">Extra Virgin Olive Oils</a>
+            <a href="products.html?cat=fruit-vinegar">Aged Fruit Vinegars</a>
+            <a href="products.html?cat=balsamic-vinegar">Tradizionale Balsamics</a>
+            <a href="gifting.html">Custom Gift Box Studio</a>
+            <a href="#" onclick="event.preventDefault(); App.openAuthModal();">Harvest Member Sign In</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Experiences</h5>
+          <div class="footer-links">
+            <a href="events.html">Guided Tasting Flights</a>
+            <a href="events.html#sommelier">Sommelier Masterclasses</a>
+            <a href="events.html#private">Private Cellar Hire</a>
+            <a href="contact.html">Tasting Room Hours</a>
+            <a href="contact.html#directions">Directions &amp; Parking</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>The Harvest Club</h5>
+          <p style="font-size: 0.86rem; color: #A8A29E; margin-bottom: 0.75rem;">
+            Join our private circle for early access to limited single-grove pressings, seasonal recipes, and 15% off your first order.
+          </p>
+          <form class="newsletter-submit-form footer-newsletter-form">
+            <input type="email" placeholder="Enter your email" required aria-label="Email Address">
+            <button type="submit" class="btn btn-primary btn-sm">Join</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div>&copy; 2026 SOLARIA &amp; TERRA Botanical Press. All rights reserved.</div>
+      <div class="social-links" aria-label="Social Media Links">
+        <a href="https://instagram.com/solariaandterra" target="_blank" rel="noopener noreferrer" aria-label="Follow SOLARIA &amp; TERRA on Instagram" title="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>
+        <a href="https://facebook.com/solariaandterra" target="_blank" rel="noopener noreferrer" aria-label="Follow SOLARIA &amp; TERRA on Facebook" title="Facebook">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+        </a>
+        <a href="https://x.com/solaria_terra" target="_blank" rel="noopener noreferrer" aria-label="Follow SOLARIA &amp; TERRA on X (Twitter)" title="X (Twitter)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
+        </a>
+        <a href="https://youtube.com/@solariaterra" target="_blank" rel="noopener noreferrer" aria-label="Watch SOLARIA &amp; TERRA on YouTube" title="YouTube">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"></polygon></svg>
+        </a>
+        <a href="https://linkedin.com/company/solariaterra" target="_blank" rel="noopener noreferrer" aria-label="Connect with SOLARIA &amp; TERRA on LinkedIn" title="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    // Home Page Specific Logic:
+    document.addEventListener('DOMContentLoaded', () => {
+      // Render 4 featured products on home page
+      const featuredContainer = document.getElementById('homeFeaturedGrid');
+      if (featuredContainer && typeof SHOP_DATA !== 'undefined') {
+        const featured = SHOP_DATA.products.slice(0, 4);
+        featuredContainer.innerHTML = featured.map(p => App.renderProductCard(p)).join('');
+      }
+
+      // Initialize interactive dish pairing switcher
+      const dishBtns = document.querySelectorAll('.dish-card-btn');
+      const pairingResultBox = document.getElementById('pairingResultOutput');
+      if (dishBtns.length && pairingResultBox) {
+        dishBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            dishBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const id = btn.dataset.pairingId;
+            const p = SHOP_DATA.dishPairings.find(x => x.id === id);
+            if (p) {
+              pairingResultBox.innerHTML = `
+                <div>
+                  <span class="eyebrow eyebrow-terracotta">SOMMELIER'S DISH PAIRING</span>
+                  <h3 style="margin-bottom: 0.75rem;">${p.dish} ${p.emoji}</h3>
+                  <p style="color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 1.25rem;">${p.description}</p>
+                  <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                    <span class="badge badge-olive">Oil: ${p.recommendedOil}</span>
+                    <span class="badge badge-balsamic">Vinegar: ${p.recommendedVinegar}</span>
+                  </div>
+                </div>
+                <div style="background-color: #FFFFFF; border-radius: var(--radius-md); border: 1px solid var(--color-border); padding: 1.5rem; text-align: center;">
+                  <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Experience this Flight at Home</h4>
+                  <p style="font-size: 0.85rem; color: var(--color-text-secondary); margin-bottom: 1.25rem;">Includes full pairing recipe card & sommelier tasting notes.</p>
+                  <button class="btn btn-primary btn-sm" onclick="App.showToast('Added ${p.dish} Pairing to your bag!', 'success')">
+                    Add Pairing Set to Bag
+                  </button>
+                </div>
+              `;
+            }
+          });
+        });
+      }
+    });
+
+    // Switch Virtual Tasting Bar view
+    function switchTastingView(productId) {
+      const product = SHOP_DATA.products.find(p => p.id === productId);
+      if (!product) return;
+
+      // Update active tab style
+      const tabs = document.querySelectorAll('.tasting-tab-btn');
+      tabs.forEach(t => t.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+
+      // Update image and text
+      document.getElementById('tastingBottleImg').src = product.image;
+      document.getElementById('tastingBottleImg').alt = product.name;
+      document.getElementById('tastingTitle').textContent = product.name;
+      document.getElementById('tastingDesc').textContent = product.description;
+      document.getElementById('tastingOriginText').textContent = `📍 ${product.region}`;
+      document.getElementById('tastingIntensityBadge').textContent = `${product.intensityStars} ${product.intensity.toUpperCase()} INTENSITY`;
+      document.getElementById('tastingPolyphenols').textContent = product.polyphenols;
+      document.getElementById('tastingAcidity').textContent = product.acidity;
+      document.getElementById('tastingVarietals').textContent = product.varietal;
+      document.getElementById('tastingSmokePoint').textContent = product.smokePoint;
+      
+      const notesContainer = document.getElementById('tastingNotesContainer');
+      notesContainer.innerHTML = product.tastingNotes.map(n => `<span class="flavor-pill">${n}</span>`).join('');
+
+      const addBtn = document.getElementById('tastingAddToCartBtn');
+      addBtn.textContent = `Add ${product.name.split('—')[0].trim()} to Bag — $${product.price.toFixed(2)}`;
+      addBtn.setAttribute('onclick', `App.addToCart('${product.id}')`);
+    }
+  </script>
+</body>
+</html>

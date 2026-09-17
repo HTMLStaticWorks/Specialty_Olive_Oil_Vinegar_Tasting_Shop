@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curated Gifting & Custom Gift Box Studio | SOLARIA & TERRA</title>
+  <meta name="description" content="Design custom luxury olive oil and balsamic vinegar gift sets in our interactive studio. Italian linen wraps, gold pour spouts, and corporate gifting.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .gift-bottle-select-card {
+      border: 1.5px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 1rem;
+      text-align: center;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      background-color: var(--color-canvas);
+      position: relative;
+    }
+    .gift-bottle-select-card:hover {
+      border-color: var(--color-terracotta);
+      transform: translateY(-2px);
+    }
+    .gift-bottle-select-card.selected {
+      border-color: var(--color-terracotta);
+      background-color: var(--color-terracotta-light);
+      box-shadow: 0 4px 12px rgba(200, 90, 50, 0.15);
+    }
+    .gift-bottle-select-card.selected::after {
+      content: '✓ Selected';
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      background-color: var(--color-terracotta);
+      color: #FFFFFF;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 0.15rem 0.5rem;
+      border-radius: var(--radius-pill);
+    }
+    .gift-bottle-select-card img {
+      max-height: 120px;
+      margin: 0 auto 0.5rem;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Announcement Top Bar -->
+  <div class="announcement-bar">
+    <span>🎁 <strong>Complimentary Calligraphy Gift Note &amp; Wax Seal:</strong> Included on all gift sets</span>
+    <span style="opacity: 0.5;">|</span>
+    <span>Corporate bulk concierge available for 10+ sets</span>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="site-logo" aria-label="SOLARIA & TERRA Homepage">
+        <span class="brand-name">SOLARIA &amp; TERRA</span>
+        <span class="brand-tagline">Botanical Olive Oils &amp; Vinegars</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home-2.html" class="nav-link">Home 2</a>
+        <a href="products.html" class="nav-link">Olive Oils &amp; Vinegars</a>
+        <a href="events.html" class="nav-link">Tasting Events</a>
+        <a href="gifting.html" class="nav-link active">Gifting &amp; Sets</a>
+        <a href="contact.html" class="nav-link">Boutique &amp; Visit</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Theme & RTL Pill Widget (Navbar Controls) -->
+        <div class="navbar-util-pill" aria-label="Theme and Language Controls">
+          <button class="navbar-util-btn theme-toggle-trigger" onclick="App.toggleTheme()" title="Toggle Dark/Light Theme" aria-label="Toggle Theme">
+            🌙
+          </button>
+          <button class="navbar-util-btn rtl-toggle-trigger" onclick="App.toggleRTL()" title="Toggle RTL Layout" aria-label="Toggle RTL">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="4" y1="9" x2="20" y2="9"></line>
+              <polyline points="15 4 20 9 15 14"></polyline>
+              <line x1="20" y1="15" x2="4" y2="15"></line>
+              <polyline points="9 20 4 15 9 10"></polyline>
+            </svg>
+          </button>
+        </div>
+
+        <button class="action-btn trigger-cart-drawer" aria-label="Open Tasting Bag">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="cart-count-badge">1</span>
+        </button>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Mobile Navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    
+    <!-- Hero Banner -->
+    <section class="section-py-sm" style="background: linear-gradient(180deg, var(--color-canvas) 0%, var(--color-canvas-subtle) 100%); border-bottom: 1px solid var(--color-border);">
+      <div class="container text-center" style="max-width: 780px;">
+        <span class="eyebrow eyebrow-terracotta">ARTISANAL GIFTING</span>
+        <h1 style="margin-bottom: 0.85rem;">The Art of Mediterranean Gifting</h1>
+        <p class="lead-p">
+          Whether celebrating a milestone, thanking a gracious host, or rewarding a corporate team, our bespoke harvest sets are dressed in Italian linen paper, gold accents, and personalized wax seals.
+        </p>
+      </div>
+    </section>
+
+    <!-- Custom Gift Box Builder Studio Section -->
+    <section class="section-py" id="customGiftBuilderStudio">
+      <div class="container">
+        <div class="text-center" style="max-width: 680px; margin: 0 auto 3rem;">
+          <span class="eyebrow eyebrow-terracotta">INTERACTIVE STUDIO</span>
+          <h2>Build Your Bespoke Tasting Box</h2>
+          <p class="lead-p">
+            Choose your box finish, curate your favorite single-estate oils and vinegars, and add a handwritten calligraphy note.
+          </p>
+        </div>
+
+        <div class="gift-builder-container">
+          
+          <!-- Left: 4-Step Form Panel -->
+          <div class="gift-builder-steps">
+            
+            <!-- Step Navigation Tabs -->
+            <div class="builder-step-nav">
+              <button class="step-nav-btn active" data-step="1">
+                <span class="step-num">1</span>
+                <span>Box Style</span>
+              </button>
+              <button class="step-nav-btn" data-step="2">
+                <span class="step-num">2</span>
+                <span>Select Bottles</span>
+              </button>
+              <button class="step-nav-btn" data-step="3">
+                <span class="step-num">3</span>
+                <span>Gourmet Extras</span>
+              </button>
+              <button class="step-nav-btn" data-step="4">
+                <span class="step-num">4</span>
+                <span>Calligraphy Note</span>
+              </button>
+            </div>
+
+            <!-- Step 1: Choose Box Finish -->
+            <div class="builder-step-panel" data-step="1">
+              <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Step 1: Choose Keepsake Box &amp; Size</h4>
+              <p style="font-size: 0.88rem; color: var(--color-text-secondary); margin-bottom: 1.5rem;">
+                Handcrafted rigid keepsake boxes finished with blind debossed botanical illustrations.
+              </p>
+
+              <div class="gift-box-option-cards">
+                <div class="gift-box-card selected" data-box-name="Sunlit Linen Alabaster Duo" data-box-price="15.00" data-box-size="2" data-box-color="#FAF7F2">
+                  <span style="font-size: 1.8rem; display: block; margin-bottom: 0.5rem;">📦</span>
+                  <strong style="display: block; font-size: 0.95rem;">Linen Duo Box</strong>
+                  <span style="font-size: 0.78rem; color: var(--color-text-muted);">Fits 2 Bottles</span>
+                  <div style="font-weight: 700; color: var(--color-terracotta); margin-top: 0.5rem;">$15.00</div>
+                </div>
+
+                <div class="gift-box-card" data-box-name="Terracotta Embossed Trio" data-box-price="18.00" data-box-size="3" data-box-color="#FBF0EB">
+                  <span style="font-size: 1.8rem; display: block; margin-bottom: 0.5rem;">🎁</span>
+                  <strong style="display: block; font-size: 0.95rem;">Terracotta Trio</strong>
+                  <span style="font-size: 0.78rem; color: var(--color-text-muted);">Fits 3 Bottles</span>
+                  <div style="font-weight: 700; color: var(--color-terracotta); margin-top: 0.5rem;">$18.00</div>
+                </div>
+
+                <div class="gift-box-card" data-box-name="Heirloom Pine Cellar Quad" data-box-price="25.00" data-box-size="4" data-box-color="#EFEFEA">
+                  <span style="font-size: 1.8rem; display: block; margin-bottom: 0.5rem;">🪵</span>
+                  <strong style="display: block; font-size: 0.95rem;">Pine Wood Quad</strong>
+                  <span style="font-size: 0.78rem; color: var(--color-text-muted);">Fits 4 Bottles</span>
+                  <div style="font-weight: 700; color: var(--color-terracotta); margin-top: 0.5rem;">$25.00</div>
+                </div>
+              </div>
+
+              <div class="flex justify-between items-center" style="margin-top: 2rem;">
+                <span></span>
+                <button class="btn btn-primary step-next-btn">Continue to Bottle Selection &rarr;</button>
+              </div>
+            </div>
+
+            <!-- Step 2: Select Bottles -->
+            <div class="builder-step-panel" data-step="2" style="display: none;">
+              <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Step 2: Choose Your Bottles</h4>
+              <p style="font-size: 0.88rem; color: var(--color-text-secondary); margin-bottom: 1.5rem;">
+                Select your oils and vinegars to fill your box slots. Tap a bottle to select/deselect.
+              </p>
+
+              <div class="grid grid-3" style="gap: 1rem;">
+                <div class="gift-bottle-select-card" data-product-id="oil-awake">
+                  <img src="image/oi (1).jpg" alt="AWAKE EVOO">
+                  <strong style="font-size: 0.85rem; display: block;">AWAKE EVOO</strong>
+                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Robust &amp; Peppery</span>
+                  <div style="font-weight: 700; color: var(--color-terracotta); font-size: 0.85rem; margin-top: 0.25rem;">$42.00</div>
+                </div>
+
+                <div class="gift-bottle-select-card" data-product-id="oil-alive">
+                  <img src="image/oi (2).jpg" alt="ALIVE EVOO">
+                  <strong style="font-size: 0.85rem; display: block;">ALIVE EVOO</strong>
+                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Grassy Herbaceous</span>
+                  <div style="font-weight: 700; color: var(--color-terracotta); font-size: 0.85rem; margin-top: 0.25rem;">$40.00</div>
+                </div>
+
+                <div class="gift-bottle-select-card" data-product-id="oil-lucent">
+                  <img src="image/oi (4).jpg" alt="LUCENT Lemon EVOO">
+                  <strong style="font-size: 0.85rem; display: block;">LUCENT Lemon</strong>
+                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Crushed Citrus</span>
+                  <div style="font-weight: 700; color: var(--color-terracotta); font-size: 0.85rem; margin-top: 0.25rem;">$44.00</div>
+                </div>
+
+                <div class="gift-bottle-select-card" data-product-id="vin-trebbiano">
+                  <img src="image/oi (12).jpg" alt="PARASOL Champagne Vinegar">
+                  <strong style="font-size: 0.85rem; display: block;">PARASOL Vinegar</strong>
+                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Raw Champagne</span>
+                  <div style="font-weight: 700; color: var(--color-terracotta); font-size: 0.85rem; margin-top: 0.25rem;">$36.00</div>
+                </div>
+
+                <div class="gift-bottle-select-card" data-product-id="vin-balsamic-reserve">
+                  <img src="image/oi (14).jpg" alt="NOCTURNE 12-Yr Balsamic">
+                  <strong style="font-size: 0.85rem; display: block;">NOCTURNE Balsamic</strong>
+                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">12-Yr Oak-Aged</span>
+                  <div style="font-weight: 700; color: var(--color-terracotta); font-size: 0.85rem; margin-top: 0.25rem;">$58.00</div>
+                </div>
+
+                <div class="gift-bottle-select-card" data-product-id="oil-chili">
+                  <img src="image/oi (9).jpg" alt="ARSON Chili Oil">
+                  <strong style="font-size: 0.85rem; display: block;">ARSON Chili Oil</strong>
+                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Smoky Arbol &amp; Garlic</span>
+                  <div style="font-weight: 700; color: var(--color-terracotta); font-size: 0.85rem; margin-top: 0.25rem;">$44.00</div>
+                </div>
+              </div>
+
+              <div class="flex justify-between items-center" style="margin-top: 2rem;">
+                <button class="btn btn-outline step-prev-btn">&larr; Back</button>
+                <button class="btn btn-primary step-next-btn">Continue to Extras &rarr;</button>
+              </div>
+            </div>
+
+            <!-- Step 3: Gourmet Extras -->
+            <div class="builder-step-panel" data-step="3" style="display: none;">
+              <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Step 3: Add Gourmet Accompaniments</h4>
+              <p style="font-size: 0.88rem; color: var(--color-text-secondary); margin-bottom: 1.5rem;">
+                Complete the tasting ritual with artisanal tools and seasoned salts.
+              </p>
+
+              <div style="display: flex; flex-direction: column; gap: 0.85rem;">
+                <label style="display: flex; align-items: center; gap: 1rem; background-color: var(--color-canvas); border: 1.5px solid var(--color-border); padding: 1rem; border-radius: var(--radius-md); cursor: pointer;">
+                  <input type="checkbox" class="gift-extra-checkbox" data-extra-name="Bespoke Gold Weighted Pour Spout" data-extra-price="12.00">
+                  <div style="flex-grow: 1;">
+                    <strong style="display: block; font-size: 0.95rem;">Bespoke Gold Weighted Pour Spout</strong>
+                    <span style="font-size: 0.78rem; color: var(--color-text-muted);">Solid brass weighted flap for drip-free pouring</span>
+                  </div>
+                  <span style="font-weight: 700; color: var(--color-terracotta);">+$12.00</span>
+                </label>
+
+                <label style="display: flex; align-items: center; gap: 1rem; background-color: var(--color-canvas); border: 1.5px solid var(--color-border); padding: 1rem; border-radius: var(--radius-md); cursor: pointer;">
+                  <input type="checkbox" class="gift-extra-checkbox" data-extra-name="Hand-Thrown Ceramic Olive Dipping Dish" data-extra-price="16.00">
+                  <div style="flex-grow: 1;">
+                    <strong style="display: block; font-size: 0.95rem;">Hand-Thrown Ceramic Olive Dipping Dish</strong>
+                    <span style="font-size: 0.78rem; color: var(--color-text-muted);">Crafted by Ojai Valley potters in speckled clay</span>
+                  </div>
+                  <span style="font-weight: 700; color: var(--color-terracotta);">+$16.00</span>
+                </label>
+
+                <label style="display: flex; align-items: center; gap: 1rem; background-color: var(--color-canvas); border: 1.5px solid var(--color-border); padding: 1rem; border-radius: var(--radius-md); cursor: pointer;">
+                  <input type="checkbox" class="gift-extra-checkbox" data-extra-name="California Flaky Fleur de Sel Finishing Salt (100g)" data-extra-price="10.00">
+                  <div style="flex-grow: 1;">
+                    <strong style="display: block; font-size: 0.95rem;">California Flaky Fleur de Sel (100g)</strong>
+                    <span style="font-size: 0.78rem; color: var(--color-text-muted);">Solar-evaporated Pacific sea salt pyramid crystals</span>
+                  </div>
+                  <span style="font-weight: 700; color: var(--color-terracotta);">+$10.00</span>
+                </label>
+              </div>
+
+              <div class="flex justify-between items-center" style="margin-top: 2rem;">
+                <button class="btn btn-outline step-prev-btn">&larr; Back</button>
+                <button class="btn btn-primary step-next-btn">Continue to Calligraphy Note &rarr;</button>
+              </div>
+            </div>
+
+            <!-- Step 4: Calligraphy Note & Recipient -->
+            <div class="builder-step-panel" data-step="4" style="display: none;">
+              <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Step 4: Complimentary Calligraphy Note</h4>
+              <p style="font-size: 0.88rem; color: var(--color-text-secondary); margin-bottom: 1.5rem;">
+                Every box includes a heavy cardstock note handwritten by our Santa Ynez studio team and sealed with our botanical olive wax stamp.
+              </p>
+
+              <div class="form-group">
+                <label class="form-label" for="giftRecipientName">Recipient Name / Salutation</label>
+                <input type="text" id="giftRecipientName" class="form-control" placeholder="e.g. Sarah &amp; David">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="giftNoteMessage">Your Personal Message (Max 240 Characters)</label>
+                <textarea id="giftNoteMessage" class="form-control" rows="4" maxlength="240" placeholder="Wishing you memorable meals, warm evenings, and boundless inspiration in the kitchen. With all our love..."></textarea>
+              </div>
+
+              <div class="flex justify-between items-center" style="margin-top: 2rem;">
+                <button class="btn btn-outline step-prev-btn">&larr; Back</button>
+                <button class="btn btn-primary btn-lg" id="addCustomBoxToCartBtn">
+                  Add Bespoke Gift Box to Bag
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right: Live Visual Studio Preview -->
+          <div class="gift-preview-sidebar">
+            <span class="eyebrow eyebrow-terracotta" style="margin-bottom: 0.5rem;">LIVE STUDIO PREVIEW</span>
+            <h4 style="font-size: 1.35rem; margin-bottom: 1rem;">Your Custom Tasting Box</h4>
+
+            <div class="gift-box-visual-canvas">
+              <span id="previewBoxFinish" style="font-size: 0.8rem; font-weight: 700; color: var(--color-text-secondary); text-transform: uppercase; margin-bottom: 0.5rem;">
+                Sunlit Linen Alabaster Duo ($15.00)
+              </span>
+
+              <div class="gift-slots-preview" id="previewBottleSlots">
+                <!-- Dynamic slots rendered via JS -->
+              </div>
+              <span style="font-size: 0.72rem; color: var(--color-text-muted);">Wax-Sealed &amp; Tied with Organic Jute</span>
+            </div>
+
+            <!-- Summary Breakdown -->
+            <div style="background-color: #FFFFFF; padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); margin-bottom: 1.5rem;">
+              <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--color-text-muted); margin-bottom: 0.5rem;">Curated Selections</div>
+              <div id="previewBottlesList"></div>
+              
+              <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--color-text-muted); margin: 0.75rem 0 0.4rem;">Gourmet Extras</div>
+              <div id="previewExtrasList"></div>
+
+              <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--color-text-muted); margin: 0.75rem 0 0.4rem;">Calligraphy Note</div>
+              <div id="previewGiftNoteContent"></div>
+            </div>
+
+            <!-- Live Total -->
+            <div class="flex justify-between items-center" style="margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--color-border);">
+              <div>
+                <span style="font-size: 0.8rem; color: var(--color-text-muted); display: block;">Box Total</span>
+                <span style="font-size: 0.75rem; color: var(--color-olive-grove); font-weight: 600;">Complimentary Gift Wrapping</span>
+              </div>
+              <span id="previewBoxTotalPrice" style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 700; color: var(--color-terracotta);">$15.00</span>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Curated Ready-to-Ship Gift Sets -->
+    <section class="section-py" style="background-color: var(--color-canvas-subtle); border-top: 1px solid var(--color-border);">
+      <div class="container">
+        <div class="text-center" style="max-width: 650px; margin: 0 auto 3rem;">
+          <span class="eyebrow eyebrow-olive">READY-TO-SHIP SETS</span>
+          <h2>Sommelier-Curated Gift Vaults</h2>
+          <p class="lead-p">
+            Pre-assembled signature duos and cellar flights packaged in our signature blind-embossed gift cartons.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          
+          <!-- Set 1 -->
+          <div class="product-card">
+            <div class="product-image-container">
+              <span class="badge badge-terracotta" style="position: absolute; top: 1rem; left: 1rem;">#1 Most Gifted</span>
+              <img src="image/oi (19).jpg" alt="The Essential Duo Awake and Alive">
+            </div>
+            <div class="product-card-body">
+              <div class="product-origin-meta">
+                <span>California Harvest</span>
+                <span>2 x 375ml</span>
+              </div>
+              <h3 class="product-title font-serif">The Essential Duo</h3>
+              <p class="product-tagline">AWAKE (Robust) + ALIVE (Grassy) in Linen Gift Box with Gold Pour Spout</p>
+              <div class="product-card-footer">
+                <div class="product-price">$78.00</div>
+                <button class="add-cart-btn" onclick="App.addToCart('set-duo-tasting')">
+                  Add Set to Bag
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Set 2 -->
+          <div class="product-card">
+            <div class="product-image-container">
+              <span class="badge badge-amber" style="position: absolute; top: 1rem; left: 1rem;">Tasting Bar Edition</span>
+              <img src="image/oi (22).jpg" alt="The Mini Tasting Flight 4 Petite Bottles">
+            </div>
+            <div class="product-card-body">
+              <div class="product-origin-meta">
+                <span>Multi-Terroir</span>
+                <span>4 x 100ml</span>
+              </div>
+              <h3 class="product-title font-serif">The Mini Flight</h3>
+              <p class="product-tagline">4 Petite Bottles: Awake, Alive, Lucent Lemon &amp; Parasol Champagne Vinegar</p>
+              <div class="product-card-footer">
+                <div class="product-price">$68.00</div>
+                <button class="add-cart-btn" onclick="App.addToCart('set-mini-flight')">
+                  Add Set to Bag
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Set 3 -->
+          <div class="product-card">
+            <div class="product-image-container">
+              <span class="badge badge-balsamic" style="position: absolute; top: 1rem; left: 1rem;">Collector's Vault</span>
+              <img src="image/oi (28).jpg" alt="The Chef's Quintet Complete Vault">
+            </div>
+            <div class="product-card-body">
+              <div class="product-origin-meta">
+                <span>Complete Reserve</span>
+                <span>5 x 375ml</span>
+              </div>
+              <h3 class="product-title font-serif">The Chef’s Quintet</h3>
+              <p class="product-tagline">Full chromatic spectrum: 3 EVOOs, Chili Oil &amp; 12-Year Aged Balsamic in Pine Crate</p>
+              <div class="product-card-footer">
+                <div class="product-price">$185.00</div>
+                <button class="add-cart-btn" onclick="App.addToCart('set-chef-quintet')">
+                  Add Set to Bag
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Corporate Gifting Concierge Section -->
+    <section class="section-py" id="corporate" style="background-color: #FFFFFF;">
+      <div class="container">
+        <div class="grid grid-2" style="align-items: center; gap: 4rem;">
+          <div>
+            <span class="eyebrow eyebrow-terracotta">CORPORATE &amp; CONCIERGE</span>
+            <h2>Elevate Your Executive &amp; Client Gifting</h2>
+            <p class="lead-p" style="margin: 1.25rem 0;">
+              Leave an indelible impression on clients, wedding parties, and executive partners. We offer multi-address drop-shipping, custom company logo wax seals, and bespoke ribboning.
+            </p>
+
+            <div style="background-color: var(--color-canvas); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); margin-bottom: 2rem;">
+              <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem;">Volume Tier Benefits</h4>
+              <div style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.88rem;">
+                <div class="flex justify-between">
+                  <span>10 – 24 Gift Sets</span>
+                  <strong style="color: var(--color-olive-grove);">10% Savings + Free Custom Ribbon</strong>
+                </div>
+                <div class="flex justify-between">
+                  <span>25 – 99 Gift Sets</span>
+                  <strong style="color: var(--color-olive-grove);">15% Savings + Custom Wax Seal Logo</strong>
+                </div>
+                <div class="flex justify-between">
+                  <span>100+ Gift Sets</span>
+                  <strong style="color: var(--color-terracotta);">20% Savings + Dedicated Sommelier Concierge</strong>
+                </div>
+              </div>
+            </div>
+
+            <a href="contact.html?subject=corporate-gifting" class="btn btn-dark btn-lg">
+              Inquire with Gifting Concierge
+            </a>
+          </div>
+
+          <div class="editorial-media-card">
+            <img src="image/oi (37).jpg" alt="Corporate bespoke gift packaging">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <span class="brand-name">SOLARIA &amp; TERRA</span>
+          <p>
+            Artisanal single-estate California and Mediterranean cold-pressed botanical oils and aged living vinegars.
+          </p>
+          <div style="margin-top: 1.5rem; font-size: 0.8rem; color: #A8A29E;">
+            Santa Ynez Valley Tasting Boutique • <strong>428 Sunlit Orchard Way, CA</strong>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Tasting &amp; Shop</h5>
+          <div class="footer-links">
+            <a href="products.html">All Olive Oils &amp; Vinegars</a>
+            <a href="products.html">Extra Virgin EVOOs</a>
+            <a href="events.html">Tasting Events</a>
+            <a href="gifting.html">Gift Box Studio</a>
+            <a href="#" onclick="event.preventDefault(); App.openAuthModal();">Harvest Member Sign In</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Gifting</h5>
+          <div class="footer-links">
+            <a href="gifting.html">Custom Gift Studio</a>
+            <a href="gifting.html#corporate">Corporate Concierge</a>
+            <a href="products.html?cat=sets">Ready-to-Ship Sets</a>
+            <a href="contact.html">Boutique Pickup</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>The Harvest Club</h5>
+          <p style="font-size: 0.86rem; color: #A8A29E; margin-bottom: 0.75rem;">
+            Join for early harvest drops and 15% off your order with code <strong>HARVEST15</strong>.
+          </p>
+          <form class="newsletter-submit-form footer-newsletter-form">
+            <input type="email" placeholder="Enter your email" required aria-label="Email Address">
+            <button type="submit" class="btn btn-primary btn-sm">Join</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div>&copy; 2026 SOLARIA &amp; TERRA Botanical Press. All rights reserved.</div>
+      <div class="social-links" aria-label="Social Media Links">
+        <a href="https://instagram.com/solariaandterra" target="_blank" rel="noopener noreferrer" aria-label="Follow SOLARIA &amp; TERRA on Instagram" title="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>
+        <a href="https://facebook.com/solariaandterra" target="_blank" rel="noopener noreferrer" aria-label="Follow SOLARIA &amp; TERRA on Facebook" title="Facebook">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+        </a>
+        <a href="https://x.com/solaria_terra" target="_blank" rel="noopener noreferrer" aria-label="Follow SOLARIA &amp; TERRA on X (Twitter)" title="X (Twitter)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
+        </a>
+        <a href="https://youtube.com/@solariaterra" target="_blank" rel="noopener noreferrer" aria-label="Watch SOLARIA &amp; TERRA on YouTube" title="YouTube">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"></polygon></svg>
+        </a>
+        <a href="https://linkedin.com/company/solariaterra" target="_blank" rel="noopener noreferrer" aria-label="Connect with SOLARIA &amp; TERRA on LinkedIn" title="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/gifting.js"></script>
+</body>
+</html>
