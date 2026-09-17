@@ -90,11 +90,11 @@
   <header class="site-header">
     <div class="container header-container">
       <a href="index.html" class="site-logo" aria-label="SOLARIA & TERRA Homepage">
-        <div class="flex items-center gap-2">
+        <img src="favicon.svg" alt="SOLARIA & TERRA Botanical Mark" class="brand-mark" width="36" height="36">
+        <div class="site-logo-text">
           <span class="brand-name">SOLARIA &amp; TERRA</span>
-          <span class="home-switcher-badge">Home 2</span>
+          <span class="brand-tagline">Botanical Olive Oils &amp; Vinegars</span>
         </div>
-        <span class="brand-tagline">Botanical Olive Oils &amp; Vinegars</span>
       </a>
 
       <nav class="nav-links" aria-label="Main Navigation">
@@ -112,17 +112,20 @@
           <button class="navbar-util-btn theme-toggle-trigger" onclick="App.toggleTheme()" title="Toggle Dark/Light Theme" aria-label="Toggle Theme">
             🌙
           </button>
-          <button class="navbar-util-btn rtl-toggle-trigger" onclick="App.toggleRTL()" title="Toggle RTL Layout" aria-label="Toggle RTL">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="4" y1="9" x2="20" y2="9"></line>
-              <polyline points="15 4 20 9 15 14"></polyline>
-              <line x1="20" y1="15" x2="4" y2="15"></line>
-              <polyline points="9 20 4 15 9 10"></polyline>
-            </svg>
+          <button class="navbar-util-btn rtl-toggle-trigger" onclick="App.toggleRTL()" title="Toggle Right-to-Left (RTL) Layout" aria-label="Toggle RTL Mode">
+            ⇄
           </button>
         </div>
 
-        <button class="action-btn trigger-cart-drawer" aria-label="Open Tasting Bag">
+        <a href="login.html" class="header-member-btn" aria-label="Harvest Member Portal / Sign In" title="Member Sign In">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Member Sign In</span>
+        </a>
+
+        <a href="products.html" class="action-btn" aria-label="Search Catalog" title="Search Collection">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </a>
+        <button class="action-btn trigger-cart-drawer" aria-label="Open Tasting Bag" title="Tasting Bag">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
           <span class="cart-count-badge">1</span>
         </button>
@@ -252,7 +255,7 @@
     </section>
 
     <!-- Interactive Sommelier Aroma & Terroir Wheel -->
-    <section class="section-py" style="background-color: #FFFFFF;">
+    <section class="section-py sensory-calibration-section">
       <div class="container">
         <div class="text-center" style="max-width: 680px; margin: 0 auto 3.5rem;">
           <span class="eyebrow eyebrow-olive">SENSORY PALATE CALIBRATION</span>
@@ -293,8 +296,8 @@
           </div>
 
           <!-- Dynamic Output Card -->
-          <div id="aromaMatchCard" style="background: radial-gradient(circle at top right, #FAF5EE 0%, #FFFFFF 100%); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
-            <div class="flex items-center gap-4">
+          <div id="aromaMatchCard" class="aroma-match-card">
+            <div class="aroma-match-inner">
               <img id="aromaImg" src="image/oi (1).jpg" alt="Matched bottle" style="height: 180px; object-fit: contain; filter: drop-shadow(0 10px 18px rgba(0,0,0,0.1));">
               <div>
                 <span class="badge badge-terracotta" id="aromaBadge">★★★ Robust Intensity</span>
@@ -342,7 +345,7 @@
     </section>
 
     <!-- Mediterranean Culinary Journal & Recipes -->
-    <section class="section-py" style="background-color: #FFFFFF; border-top: 1px solid var(--color-border);">
+    <section class="section-py estate-kitchen-section" style="border-top: 1px solid var(--color-border);">
       <div class="container">
         <div class="flex justify-between items-center" style="margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem;">
           <div>
@@ -437,22 +440,22 @@
             </div>
           </div>
 
-          <div style="background-color: #292524; padding: 2rem; border-radius: var(--radius-lg); border: 1px solid #44403C;">
+          <div class="tasting-status-card">
             <h4 style="color: #FFFFFF; font-size: 1.1rem; margin-bottom: 1rem;">Today's Tasting Bar Status</h4>
             <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.88rem; color: #D6D3D1;">
-              <div class="flex justify-between">
+              <div class="flex justify-between status-row">
                 <span>Current Status:</span>
                 <strong style="color: #4ADE80;">● Open for Walk-ins &amp; Flights</strong>
               </div>
-              <div class="flex justify-between">
+              <div class="flex justify-between status-row">
                 <span>Today's Hours:</span>
                 <span>10:00 AM – 7:00 PM</span>
               </div>
-              <div class="flex justify-between">
+              <div class="flex justify-between status-row">
                 <span>Sommelier on Duty:</span>
                 <span>Marco Bellini</span>
               </div>
-              <div class="flex justify-between">
+              <div class="flex justify-between status-row">
                 <span>Featured Flight:</span>
                 <span style="color: var(--color-sun-amber);">The Chianti &amp; Santa Ynez Reserve</span>
               </div>
@@ -469,7 +472,13 @@
     <div class="footer-top">
       <div class="container footer-grid">
         <div class="footer-brand">
-          <span class="brand-name">SOLARIA &amp; TERRA</span>
+          <a href="index.html" class="footer-logo-link">
+            <img src="favicon.svg" alt="SOLARIA & TERRA Botanical Mark" class="brand-mark" width="40" height="40">
+            <div class="site-logo-text">
+              <span class="brand-name">SOLARIA &amp; TERRA</span>
+              <span class="brand-tagline">Botanical Olive Oils &amp; Vinegars</span>
+            </div>
+          </a>
           <p>
             Artisanal single-estate California and Mediterranean cold-pressed botanical oils and aged living vinegars.
           </p>
@@ -485,7 +494,7 @@
             <a href="products.html">Extra Virgin EVOOs</a>
             <a href="events.html">Tasting Events</a>
             <a href="gifting.html">Gift Box Studio</a>
-            <a href="#" onclick="event.preventDefault(); App.openAuthModal();">Harvest Member Sign In</a>
+            <a href="login.html">Harvest Member Sign In</a>
           </div>
         </div>
 

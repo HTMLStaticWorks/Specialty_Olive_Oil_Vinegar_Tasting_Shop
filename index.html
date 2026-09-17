@@ -23,8 +23,11 @@
     <div class="container header-container">
       <!-- Brand Logo -->
       <a href="index.html" class="site-logo" aria-label="SOLARIA & TERRA Homepage">
-        <span class="brand-name">SOLARIA &amp; TERRA</span>
-        <span class="brand-tagline">Botanical Olive Oils &amp; Vinegars</span>
+        <img src="favicon.svg" alt="SOLARIA & TERRA Botanical Mark" class="brand-mark" width="36" height="36">
+        <div class="site-logo-text">
+          <span class="brand-name">SOLARIA &amp; TERRA</span>
+          <span class="brand-tagline">Botanical Olive Oils &amp; Vinegars</span>
+        </div>
       </a>
 
       <!-- Desktop Navigation -->
@@ -44,15 +47,15 @@
           <button class="navbar-util-btn theme-toggle-trigger" onclick="App.toggleTheme()" title="Toggle Dark/Light Theme" aria-label="Toggle Theme">
             🌙
           </button>
-          <button class="navbar-util-btn rtl-toggle-trigger" onclick="App.toggleRTL()" title="Toggle RTL Layout" aria-label="Toggle RTL">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="4" y1="9" x2="20" y2="9"></line>
-              <polyline points="15 4 20 9 15 14"></polyline>
-              <line x1="20" y1="15" x2="4" y2="15"></line>
-              <polyline points="9 20 4 15 9 10"></polyline>
-            </svg>
+          <button class="navbar-util-btn rtl-toggle-trigger" onclick="App.toggleRTL()" title="Toggle Right-to-Left (RTL) Layout" aria-label="Toggle RTL Mode">
+            ⇄
           </button>
         </div>
+
+        <a href="login.html" class="header-member-btn" aria-label="Harvest Member Portal / Sign In" title="Member Sign In">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Member Sign In</span>
+        </a>
 
         <a href="products.html" class="action-btn" aria-label="Search Catalog" title="Search Collection">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
@@ -204,7 +207,7 @@
                 </div>
               </div>
 
-              <div class="flex items-center gap-4" style="margin-top: 2rem;">
+              <div class="tasting-action-btns">
                 <button class="btn btn-primary btn-lg" id="tastingAddToCartBtn" onclick="App.addToCart('oil-awake')">
                   Add AWAKE to Bag — $42.00
                 </button>
@@ -334,7 +337,7 @@
                 <span class="badge badge-amber">Vinegar: PARASOL — Champagne &amp; Orange</span>
               </div>
             </div>
-            <div style="background-color: #FFFFFF; border-radius: var(--radius-md); border: 1px solid var(--color-border); padding: 1.5rem; text-align: center;">
+            <div class="pairing-buy-card">
               <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Experience this Flight at Home</h4>
               <p style="font-size: 0.85rem; color: var(--color-text-secondary); margin-bottom: 1.25rem;">Includes full pairing recipe card &amp; sommelier tasting notes.</p>
               <button class="btn btn-primary btn-sm" onclick="App.addToCart('oil-alive'); App.addToCart('vin-trebbiano');">
@@ -356,7 +359,7 @@
             <p class="lead-p" style="margin: 1.25rem 0;">
               Pull up a stool at our 20-foot reclaimed Italian oak tasting bar. Led by certified olive oil sommeliers, our intimate sessions guide you through flavor profiling, polyphenol detection, and cheese pairings.
             </p>
-            <div class="event-highlights-list" style="margin-bottom: 2rem;">
+            <ul class="event-highlights-list" style="margin-bottom: 2rem;">
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 <span><strong>The Grand Single-Estate Flight:</strong> 6 oils + 4 vinegars with farmstead bites ($55)</span>
@@ -369,7 +372,7 @@
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 <span><strong>Private Cellar Hire:</strong> Exclusive evening bookings for corporate &amp; bridal parties</span>
               </li>
-            </div>
+            </ul>
             <div class="flex gap-4">
               <a href="events.html" class="btn btn-primary">View Upcoming Sessions</a>
               <a href="contact.html" class="btn btn-outline">Location &amp; Directions</a>
@@ -384,7 +387,7 @@
     </section>
 
     <!-- Editorial Gifting Teaser -->
-    <section class="section-py" style="background-color: #FFFFFF;">
+    <section class="section-py gifting-editorial-section">
       <div class="container">
         <div class="grid grid-2" style="align-items: center; gap: 4rem;">
           <div class="editorial-media-card">
@@ -415,7 +418,7 @@
         <h2 style="margin-bottom: 2.5rem;">Notes from Our Tasting Table</h2>
         
         <div class="grid grid-3">
-          <div style="background-color: #FFFFFF; padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--color-border); text-align: left;">
+          <div class="testimonial-card">
             <div style="color: var(--color-sun-amber); font-size: 1.1rem; margin-bottom: 0.5rem;">★★★★★</div>
             <p style="font-size: 0.95rem; color: var(--color-text-primary); line-height: 1.6; margin-bottom: 1.25rem;">
               "The AWAKE oil ruined all supermarket oils for me forever. It smells like pure freshly cut herbs and has that authentic peppery kick at the back of the throat. Exceptional quality."
@@ -423,7 +426,7 @@
             <span style="font-weight: 700; font-size: 0.85rem;">— Dr. Sophia L., San Francisco</span>
           </div>
 
-          <div style="background-color: #FFFFFF; padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--color-border); text-align: left;">
+          <div class="testimonial-card">
             <div style="color: var(--color-sun-amber); font-size: 1.1rem; margin-bottom: 0.5rem;">★★★★★</div>
             <p style="font-size: 0.95rem; color: var(--color-text-primary); line-height: 1.6; margin-bottom: 1.25rem;">
               "We booked the Grand Tasting Flight for our anniversary in Santa Ynez. The sommelier Elena was incredible. Pairing the 12-year balsamic over gelato changed my life."
@@ -431,7 +434,7 @@
             <span style="font-weight: 700; font-size: 0.85rem;">— Marcus &amp; Chloe T., Los Angeles</span>
           </div>
 
-          <div style="background-color: #FFFFFF; padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--color-border); text-align: left;">
+          <div class="testimonial-card">
             <div style="color: var(--color-sun-amber); font-size: 1.1rem; margin-bottom: 0.5rem;">★★★★★</div>
             <p style="font-size: 0.95rem; color: var(--color-text-primary); line-height: 1.6; margin-bottom: 1.25rem;">
               "Sent 45 customized gift sets to our key executive clients with custom embossed notes. The feedback was overwhelmingly positive. Seamless corporate concierge!"
@@ -449,7 +452,13 @@
     <div class="footer-top">
       <div class="container footer-grid">
         <div class="footer-brand">
-          <span class="brand-name">SOLARIA &amp; TERRA</span>
+          <a href="index.html" class="footer-logo-link">
+            <img src="favicon.svg" alt="SOLARIA & TERRA Botanical Mark" class="brand-mark" width="40" height="40">
+            <div class="site-logo-text">
+              <span class="brand-name">SOLARIA &amp; TERRA</span>
+              <span class="brand-tagline">Botanical Olive Oils &amp; Vinegars</span>
+            </div>
+          </a>
           <p>
             Single-estate California and Mediterranean cold-pressed botanical oils and artisanal living vinegars. Dedicated to honoring regenerative groves and sunlit culinary traditions.
           </p>
@@ -472,7 +481,7 @@
             <a href="products.html?cat=fruit-vinegar">Aged Fruit Vinegars</a>
             <a href="products.html?cat=balsamic-vinegar">Tradizionale Balsamics</a>
             <a href="gifting.html">Custom Gift Box Studio</a>
-            <a href="#" onclick="event.preventDefault(); App.openAuthModal();">Harvest Member Sign In</a>
+            <a href="login.html">Harvest Member Sign In</a>
           </div>
         </div>
 
@@ -556,7 +565,7 @@
                     <span class="badge badge-balsamic">Vinegar: ${p.recommendedVinegar}</span>
                   </div>
                 </div>
-                <div style="background-color: #FFFFFF; border-radius: var(--radius-md); border: 1px solid var(--color-border); padding: 1.5rem; text-align: center;">
+                <div class="pairing-buy-card">
                   <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Experience this Flight at Home</h4>
                   <p style="font-size: 0.85rem; color: var(--color-text-secondary); margin-bottom: 1.25rem;">Includes full pairing recipe card & sommelier tasting notes.</p>
                   <button class="btn btn-primary btn-sm" onclick="App.showToast('Added ${p.dish} Pairing to your bag!', 'success')">

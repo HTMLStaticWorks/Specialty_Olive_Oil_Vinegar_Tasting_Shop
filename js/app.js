@@ -287,9 +287,9 @@ const App = {
                 </button>
               </div>
             </div>
-            <button class="btn btn-outline btn-sm" onclick="App.closeMobileNav(); App.openAuthModal();" style="width: 100%; margin-bottom: 0.25rem;">
+            <a href="login.html" class="btn btn-outline btn-sm" onclick="App.closeMobileNav();" style="width: 100%; margin-bottom: 0.25rem;">
               👤 Harvest Member Portal / Sign In
-            </button>
+            </a>
             <a href="contact.html#reserve" class="btn btn-primary btn-sm" style="width: 100%;">
               Reserve Tasting Table
             </a>
@@ -772,6 +772,38 @@ const App = {
       const name = document.getElementById('regName')?.value || 'Member';
       this.showToast(`🌿 Welcome to the Harvest Club, ${name}! Your 15% discount code is HARVEST15.`, 'success');
       this.closeAuthModal();
+    }
+  },
+
+  handleStandaloneAuth(type) {
+    if (type === 'login') {
+      const email = document.getElementById('loginEmail')?.value || 'Harvest Member';
+      this.showToast(`✨ Welcome back to SOLARIA & TERRA, ${email.split('@')[0]}!`, 'success');
+      setTimeout(() => {
+        window.location.href = 'index.html';
+      }, 1000);
+    } else {
+      const name = document.getElementById('signupName')?.value || 'Harvest Member';
+      this.showToast(`🌿 Welcome to the Harvest Club, ${name}! Your 15% discount code HARVEST15 has been activated.`, 'success');
+      setTimeout(() => {
+        window.location.href = 'products.html';
+      }, 1200);
+    }
+  },
+
+  togglePasswordVisibility(fieldId, btnId) {
+    const input = document.getElementById(fieldId);
+    const btn = document.getElementById(btnId);
+    if (!input || !btn) return;
+
+    if (input.type === 'password') {
+      input.type = 'text';
+      btn.innerHTML = `<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg>`;
+      btn.setAttribute('aria-label', 'Hide password');
+    } else {
+      input.type = 'password';
+      btn.innerHTML = `<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>`;
+      btn.setAttribute('aria-label', 'Show password');
     }
   },
 

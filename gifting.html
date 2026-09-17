@@ -60,8 +60,11 @@
   <header class="site-header">
     <div class="container header-container">
       <a href="index.html" class="site-logo" aria-label="SOLARIA & TERRA Homepage">
-        <span class="brand-name">SOLARIA &amp; TERRA</span>
-        <span class="brand-tagline">Botanical Olive Oils &amp; Vinegars</span>
+        <img src="favicon.svg" alt="SOLARIA & TERRA Botanical Mark" class="brand-mark" width="36" height="36">
+        <div class="site-logo-text">
+          <span class="brand-name">SOLARIA &amp; TERRA</span>
+          <span class="brand-tagline">Botanical Olive Oils &amp; Vinegars</span>
+        </div>
       </a>
 
       <nav class="nav-links" aria-label="Main Navigation">
@@ -79,15 +82,15 @@
           <button class="navbar-util-btn theme-toggle-trigger" onclick="App.toggleTheme()" title="Toggle Dark/Light Theme" aria-label="Toggle Theme">
             🌙
           </button>
-          <button class="navbar-util-btn rtl-toggle-trigger" onclick="App.toggleRTL()" title="Toggle RTL Layout" aria-label="Toggle RTL">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="4" y1="9" x2="20" y2="9"></line>
-              <polyline points="15 4 20 9 15 14"></polyline>
-              <line x1="20" y1="15" x2="4" y2="15"></line>
-              <polyline points="9 20 4 15 9 10"></polyline>
-            </svg>
+          <button class="navbar-util-btn rtl-toggle-trigger" onclick="App.toggleRTL()" title="Toggle Right-to-Left (RTL) Layout" aria-label="Toggle RTL Mode">
+            ⇄
           </button>
         </div>
+
+        <a href="login.html" class="header-member-btn" aria-label="Harvest Member Portal / Sign In" title="Member Sign In">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Member Sign In</span>
+        </a>
 
         <button class="action-btn trigger-cart-drawer" aria-label="Open Tasting Bag">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
@@ -328,7 +331,7 @@
             </div>
 
             <!-- Summary Breakdown -->
-            <div style="background-color: #FFFFFF; padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); margin-bottom: 1.5rem;">
+            <div class="gift-preview-summary-card" style="padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); margin-bottom: 1.5rem;">
               <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--color-text-muted); margin-bottom: 0.5rem;">Curated Selections</div>
               <div id="previewBottlesList"></div>
               
@@ -438,7 +441,7 @@
     </section>
 
     <!-- Corporate Gifting Concierge Section -->
-    <section class="section-py" id="corporate" style="background-color: #FFFFFF;">
+    <section class="section-py corporate-gifting-section" id="corporate">
       <div class="container">
         <div class="grid grid-2" style="align-items: center; gap: 4rem;">
           <div>
@@ -448,7 +451,7 @@
               Leave an indelible impression on clients, wedding parties, and executive partners. We offer multi-address drop-shipping, custom company logo wax seals, and bespoke ribboning.
             </p>
 
-            <div style="background-color: var(--color-canvas); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); margin-bottom: 2rem;">
+            <div class="corporate-tier-card" style="padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); margin-bottom: 2rem;">
               <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem;">Volume Tier Benefits</h4>
               <div style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.88rem;">
                 <div class="flex justify-between">
@@ -485,7 +488,13 @@
     <div class="footer-top">
       <div class="container footer-grid">
         <div class="footer-brand">
-          <span class="brand-name">SOLARIA &amp; TERRA</span>
+          <a href="index.html" class="footer-logo-link">
+            <img src="favicon.svg" alt="SOLARIA & TERRA Botanical Mark" class="brand-mark" width="40" height="40">
+            <div class="site-logo-text">
+              <span class="brand-name">SOLARIA &amp; TERRA</span>
+              <span class="brand-tagline">Botanical Olive Oils &amp; Vinegars</span>
+            </div>
+          </a>
           <p>
             Artisanal single-estate California and Mediterranean cold-pressed botanical oils and aged living vinegars.
           </p>
@@ -501,7 +510,7 @@
             <a href="products.html">Extra Virgin EVOOs</a>
             <a href="events.html">Tasting Events</a>
             <a href="gifting.html">Gift Box Studio</a>
-            <a href="#" onclick="event.preventDefault(); App.openAuthModal();">Harvest Member Sign In</a>
+            <a href="login.html">Harvest Member Sign In</a>
           </div>
         </div>
 
