@@ -263,15 +263,19 @@ const App = {
               <span>Gifting &amp; Sets</span>
               <span class="nav-num">04</span>
             </a>
-            <a href="contact.html" class="mobile-nav-link-item ${this.isPage('contact.html') ? 'active' : ''}">
-              <span>Boutique &amp; Contact</span>
+            <a href="about.html" class="mobile-nav-link-item ${this.isPage('about.html') ? 'active' : ''}">
+              <span>Our Story &amp; Heritage</span>
               <span class="nav-num">05</span>
+            </a>
+            <a href="contact.html" class="mobile-nav-link-item ${this.isPage('contact.html') ? 'active' : ''}">
+              <span>Boutique &amp; Visit</span>
+              <span class="nav-num">06</span>
             </a>
           </nav>
 
           <!-- Mobile Drawer Footer & CTAs -->
           <div class="mobile-nav-footer">
-            <div class="flex items-center justify-between gap-2" style="padding: 0.5rem 0.25rem; margin-bottom: 0.25rem; border-bottom: 1px solid var(--color-border);">
+            <div class="flex items-center justify-between gap-2" style="padding: 0.5rem 0.25rem; margin-bottom: 0.5rem; border-bottom: 1px solid var(--color-border);">
               <span style="font-size: 0.8rem; font-weight: 600; color: var(--color-text-secondary);">Preferences</span>
               <div class="flex items-center gap-2">
                 <button class="quick-util-btn theme-toggle-trigger" onclick="App.toggleTheme()" title="Toggle Dark Theme" style="width: 36px; height: 36px;">
@@ -287,13 +291,10 @@ const App = {
                 </button>
               </div>
             </div>
-            <a href="login.html" class="btn btn-outline btn-sm" onclick="App.closeMobileNav();" style="width: 100%; margin-bottom: 0.25rem;">
-              👤 Harvest Member Portal / Sign In
+            <a href="events.html" class="btn btn-primary btn-sm" onclick="App.closeMobileNav();" style="width: 100%; margin-bottom: 0.4rem;">
+              Book a Guided Tasting
             </a>
-            <a href="contact.html#reserve" class="btn btn-primary btn-sm" style="width: 100%;">
-              Reserve Tasting Table
-            </a>
-            <a href="products.html" class="btn btn-outline btn-sm" style="width: 100%;">
+            <a href="products.html" class="btn btn-outline btn-sm" onclick="App.closeMobileNav();" style="width: 100%;">
               Explore All Collections
             </a>
             <div class="flex items-center justify-center gap-4" style="font-size: 0.75rem; color: var(--color-text-muted); margin-top: 0.5rem;">

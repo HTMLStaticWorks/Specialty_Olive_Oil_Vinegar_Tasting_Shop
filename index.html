@@ -37,6 +37,7 @@
         <a href="products.html" class="nav-link">Olive Oils &amp; Vinegars</a>
         <a href="events.html" class="nav-link">Tasting Events</a>
         <a href="gifting.html" class="nav-link">Gifting &amp; Sets</a>
+        <a href="about.html" class="nav-link">Our Story</a>
         <a href="contact.html" class="nav-link">Boutique &amp; Visit</a>
       </nav>
 
@@ -52,10 +53,7 @@
           </button>
         </div>
 
-        <a href="login.html" class="header-member-btn" aria-label="Harvest Member Portal / Sign In" title="Member Sign In">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Member Sign In</span>
-        </a>
+        <a href="events.html" class="header-cta-btn" id="headerCtaBtn" aria-label="Book a Guided Tasting">Book a Tasting</a>
 
         <a href="products.html" class="action-btn" aria-label="Search Catalog" title="Search Collection">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
@@ -224,12 +222,12 @@
     <!-- Featured Products Spotlight (Brightland Aesthetic Grid) -->
     <section class="section-py">
       <div class="container">
-        <div class="flex justify-between items-center" style="margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1rem;">
-          <div>
-            <span class="eyebrow eyebrow-olive">ESTATE CELLAR SELECTION</span>
-            <h2>Harvest Favorites &amp; Gift Sets</h2>
+        <div class="estate-cellar-header-row" style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1rem; width: 100%;">
+          <div style="text-align: left;">
+            <span class="eyebrow eyebrow-olive" style="text-align: left; margin: 0 0 0.5rem 0;">ESTATE CELLAR SELECTION</span>
+            <h2 style="text-align: left; margin: 0;">Harvest Favorites &amp; Gift Sets</h2>
           </div>
-          <a href="products.html" class="link-arrow font-sans">
+          <a href="products.html" class="link-arrow font-sans estate-view-all-link" style="margin-left: auto; text-align: right; display: inline-flex; align-items: center;">
             <span>View All 12 Oils &amp; Vinegars</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </a>
@@ -299,27 +297,39 @@
           <!-- Dish Buttons -->
           <div class="dish-selection-grid">
             <button class="dish-card-btn active" data-pairing-id="pairing-burrata">
-              <span class="dish-emoji">🍅</span>
+              <div class="dish-img-wrap">
+                <img src="image/dish-burrata.jpg" alt="Burrata &amp; Tomatoes" class="dish-thumb-img" width="62" height="62" loading="lazy">
+              </div>
               <span class="dish-title">Burrata &amp; Tomatoes</span>
             </button>
             <button class="dish-card-btn" data-pairing-id="pairing-sourdough">
-              <span class="dish-emoji">🥖</span>
+              <div class="dish-img-wrap">
+                <img src="image/dish-sourdough.jpg" alt="Warm Sourdough" class="dish-thumb-img" width="62" height="62" loading="lazy">
+              </div>
               <span class="dish-title">Warm Sourdough</span>
             </button>
             <button class="dish-card-btn" data-pairing-id="pairing-seafood">
-              <span class="dish-emoji">🐟</span>
+              <div class="dish-img-wrap">
+                <img src="image/dish-seabass.jpg" alt="Grilled Seabass" class="dish-thumb-img" width="62" height="62" loading="lazy">
+              </div>
               <span class="dish-title">Grilled Seabass</span>
             </button>
             <button class="dish-card-btn" data-pairing-id="pairing-steak">
-              <span class="dish-emoji">🥩</span>
+              <div class="dish-img-wrap">
+                <img src="image/dish-ribeye.jpg" alt="Charred Ribeye" class="dish-thumb-img" width="62" height="62" loading="lazy">
+              </div>
               <span class="dish-title">Charred Ribeye</span>
             </button>
             <button class="dish-card-btn" data-pairing-id="pairing-pizza">
-              <span class="dish-emoji">🍕</span>
+              <div class="dish-img-wrap">
+                <img src="image/dish-pizza.jpg" alt="Wood-Fired Pizza" class="dish-thumb-img" width="62" height="62" loading="lazy">
+              </div>
               <span class="dish-title">Wood-Fired Pizza</span>
             </button>
             <button class="dish-card-btn" data-pairing-id="pairing-dessert">
-              <span class="dish-emoji">🍨</span>
+              <div class="dish-img-wrap">
+                <img src="image/dish-gelato.jpg" alt="Vanilla Gelato" class="dish-thumb-img" width="62" height="62" loading="lazy">
+              </div>
               <span class="dish-title">Vanilla Gelato</span>
             </button>
           </div>
@@ -481,7 +491,7 @@
             <a href="products.html?cat=fruit-vinegar">Aged Fruit Vinegars</a>
             <a href="products.html?cat=balsamic-vinegar">Tradizionale Balsamics</a>
             <a href="gifting.html">Custom Gift Box Studio</a>
-            <a href="login.html">Harvest Member Sign In</a>
+            <a href="about.html">Our Story &amp; Heritage</a>
           </div>
         </div>
 
